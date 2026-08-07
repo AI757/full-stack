@@ -1,9 +1,6 @@
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { Route, Routes, useParams } from 'react-router-dom'
+import GamePage from './GamePage.jsx'
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -120,11 +117,24 @@ function Home() {
   )
 }
 
+function DedicatedGameRoute() {
+  const { slug } = useParams()
+
+  return (
+    <GamePage
+      slug={slug}
+      contactEmail="your-email@example.com"
+      showStudioHeader={true}
+    />
+  )
+}
+
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/games/:slug" element={<DedicatedGameRoute />} />
+</Routes>
   )
 }
 
