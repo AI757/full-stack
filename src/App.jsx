@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { Route, Routes, useParams } from 'react-router-dom'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
 import GamePage from './GamePage.jsx'
+import './App.css'
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -120,21 +124,15 @@ function Home() {
 function DedicatedGameRoute() {
   const { slug } = useParams()
 
-  return (
-    <GamePage
-      slug={slug}
-      contactEmail="your-email@example.com"
-      showStudioHeader={true}
-    />
-  )
+  return <GamePage slug={slug} />
 }
 
 function App() {
   return (
     <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/games/:slug" element={<DedicatedGameRoute />} />
-</Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/games/:slug" element={<DedicatedGameRoute />} />
+    </Routes>
   )
 }
 

@@ -31,6 +31,18 @@
   font-family: var(--vf-sans);
   font-size: 16px;
   line-height: 1.6;
+  text-align: left;
+}
+
+.vf-game-page h1,
+.vf-game-page h2,
+.vf-game-page h3 {
+  color: inherit;
+}
+
+.vf-game-page h1,
+.vf-game-page h2 {
+  font-weight: 900;
 }
 
 .vf-game-page.vf-theme-cyan { --vf-accent: #70f6d6; --vf-accent-dark: #062f29; }

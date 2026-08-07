@@ -1,4 +1,3 @@
-import React from "react";
 import { games, getGame } from "./games";
 import "./game-page.css";
 
