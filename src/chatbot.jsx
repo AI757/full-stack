@@ -5,13 +5,6 @@ const apiUrl = (import.meta.env.VITE_API_URL ?? 'http://localhost:3000').replace
   '',
 )
 
-const gameContext = `
-Video Forge Studios is a small independent game studio based in Texas.
-It was founded by four friends who met at iD Tech.
-The studio has two completed games on Steam, but their names and details have not been provided yet.
-Its third game, Lanyards Attack, is a science-fiction survival game currently in development.
-`.trim()
-
 function Chatbot() {
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
@@ -34,7 +27,7 @@ function Chatbot() {
       const response = await fetch(`${apiUrl}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, history, context: gameContext }),
+        body: JSON.stringify({ message, history }),
       })
       const result = await response.json()
 
