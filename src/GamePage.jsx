@@ -13,7 +13,7 @@ import "./game-page.css";
 export default function GamePage({
   slug,
   homeHref = "/",
-  gamesHref = "/#games",
+  gamesHref = "/",
   contactEmail = "",
   showStudioHeader = true,
 }) {
