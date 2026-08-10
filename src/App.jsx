@@ -1,10 +1,15 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import AuthPage from './auth/AuthPage.jsx'
+import AuthStatus from './auth/AuthStatus.jsx'
+import Chatbot from './chatbot'
+import './auth/auth.css'
 import './App.css'
 
-function App() {
+function Home() {
   const [count, setCount] = useState(0)
 
   return (
@@ -28,6 +33,7 @@ function App() {
         >
           Count is {count}
         </button>
+        <AuthStatus />
       </section>
 
       <div className="ticks"></div>
@@ -116,6 +122,20 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/chat" element={<Chatbot />} />
+      <Route path="/login" element={<AuthPage key="login" mode="login" />} />
+      <Route
+        path="/register"
+        element={<AuthPage key="register" mode="register" />}
+      />
+    </Routes>
   )
 }
 
