@@ -6,6 +6,7 @@ import heroImg from './assets/hero.png'
 import AuthPage from './auth/AuthPage.jsx'
 import AuthStatus from './auth/AuthStatus.jsx'
 import Chatbot from './chatbot'
+import './auth/auth.css'
 import './App.css'
 
 function Home() {
