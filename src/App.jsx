@@ -5,6 +5,11 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import AuthPage from './auth/AuthPage.jsx'
 import AuthStatus from './auth/AuthStatus.jsx'
+import {
+  BlogArticlePage,
+  BlogListPage,
+  BlogManagePage,
+} from './blog/index.js'
 import Chatbot from './chatbot'
 import './auth/auth.css'
 import './App.css'
@@ -130,6 +135,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/chat" element={<Chatbot />} />
+      <Route path="/blog" element={<BlogListPage />} />
+      <Route path="/blog/manage" element={<BlogManagePage />} />
+      <Route path="/blog/:slug" element={<BlogArticlePage />} />
       <Route path="/login" element={<AuthPage key="login" mode="login" />} />
       <Route
         path="/register"
