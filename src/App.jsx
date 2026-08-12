@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useParams } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -11,6 +11,8 @@ import {
   BlogManagePage,
 } from './blog/index.js'
 import Chatbot from './chatbot'
+import GameIndexPage from './game.pages/GameIndexPage.jsx'
+import GamePage from './game.pages/GamePage.jsx'
 import './auth/auth.css'
 import './App.css'
 
@@ -130,11 +132,19 @@ function Home() {
   )
 }
 
+function DedicatedGameRoute() {
+  const { slug } = useParams()
+
+  return <GamePage slug={slug} />
+}
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/chat" element={<Chatbot />} />
+      <Route path="/games" element={<GameIndexPage />} />
+      <Route path="/games/:slug" element={<DedicatedGameRoute />} />
       <Route path="/blog" element={<BlogListPage />} />
       <Route path="/blog/manage" element={<BlogManagePage />} />
       <Route path="/blog/:slug" element={<BlogArticlePage />} />
