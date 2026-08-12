@@ -8,12 +8,32 @@
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow:rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    
+   /* --- Added: spacing scale -------------------------------------------- */
+  --space-xs: 8px;
+  --space-sm: 14px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 72px;
+
+
+  /* --- Added: radii ----------------------------------------------------- */
+  --radius-panel: 28px;
+  --radius-card: 20px;
+  --radius-inner: 14px;
+
+ /* --- Added: panel surfaces -------------------------------------------- */
+  --panel: rgba(255, 255, 255, 0.72);
+  --panel-hover: rgba(255, 255, 255, 0.9);
+  --panel-border: rgba(8, 6, 13, 0.08);
+  --panel-border-lit: rgba(8, 6, 13, 0.16);
+
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+ 
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;

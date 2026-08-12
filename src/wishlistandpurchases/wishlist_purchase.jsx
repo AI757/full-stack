@@ -5,6 +5,8 @@
 // facts. Separating them means a visitor scanning for "is it out yet" does not
 // have to read the prose to find out, and the primary button no longer sits at
 // the bottom of a tall stack of text.
+import './wishlist_purchase.css'
+
 export default function WishlistPurchase() {
   return (
     <main className="store-page">
