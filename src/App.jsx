@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { Route, Routes, useParams } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import GamePage from './GamePage.jsx'
 import AuthPage from './auth/AuthPage.jsx'
 import AuthStatus from './auth/AuthStatus.jsx'
 import {
@@ -13,7 +12,6 @@ import {
 } from './blog/index.js'
 import Chatbot from './chatbot'
 import './auth/auth.css'
-
 import './App.css'
 
 function Home() {
@@ -132,12 +130,6 @@ function Home() {
   )
 }
 
-function DedicatedGameRoute() {
-  const { slug } = useParams()
-
-  return <GamePage slug={slug} />
-}
-
 function App() {
   return (
     <Routes>
@@ -151,8 +143,6 @@ function App() {
         path="/register"
         element={<AuthPage key="register" mode="register" />}
       />
-      <Route path="/games/:slug" element={<DedicatedGameRoute />} />
-
     </Routes>
   )
 }

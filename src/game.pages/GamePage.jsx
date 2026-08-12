@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 
-import { games, getGame } from '../games.js'
+import { games, getGame } from './games.js'
+import './game-page.css'
 
 export default function GamePage({ slug }) {
   const navigate = useNavigate()
