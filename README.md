@@ -1,16 +1,34 @@
-# React + Vite
+# Video Forge frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React and Vite frontend for the Video Forge Studios website.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Run `npm install`.
+2. Copy `.env.example` to `.env` when the backend is not available at the
+   default `http://localhost:3000` URL.
+3. Run `npm run dev`.
 
-## React Compiler
+## Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `/` — home page and current authentication status
+- `/chat` — game-information chatbot
+- `/blog` — published development-blog entries
+- `/blog/:slug` — rendered Markdown article
+- `/blog/manage` — administrator upload, preview, moderation, and deletion panel
+- `/login` — Passport session login
+- `/register` — account registration followed by automatic login
 
-## Expanding the ESLint configuration
+Authentication requests use `credentials: "include"` so the browser can send
+the backend's HTTP-only session cookie. Passwords and session identifiers are
+not stored in frontend state or browser storage.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The management panel accepts `.md` and `.markdown` files up to 256 KiB and shows
+their final sanitized rendering without providing an online Markdown editor.
+Inline Markdown images and styles are omitted. An optional cover image can be
+provided through a public HTTPS URL, which is validated again by the backend.
+
+## Validation
+
+- `npm run lint`
+- `npm run build`

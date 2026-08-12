@@ -4,6 +4,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import GamePage from './GamePage.jsx'
+import AuthPage from './auth/AuthPage.jsx'
+import AuthStatus from './auth/AuthStatus.jsx'
+import {
+  BlogArticlePage,
+  BlogListPage,
+  BlogManagePage,
+} from './blog/index.js'
+import Chatbot from './chatbot'
+import './auth/auth.css'
+
 import './App.css'
 
 function Home() {
@@ -30,6 +40,7 @@ function Home() {
         >
           Count is {count}
         </button>
+        <AuthStatus />
       </section>
 
       <div className="ticks"></div>
@@ -131,7 +142,17 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/chat" element={<Chatbot />} />
+      <Route path="/blog" element={<BlogListPage />} />
+      <Route path="/blog/manage" element={<BlogManagePage />} />
+      <Route path="/blog/:slug" element={<BlogArticlePage />} />
+      <Route path="/login" element={<AuthPage key="login" mode="login" />} />
+      <Route
+        path="/register"
+        element={<AuthPage key="register" mode="register" />}
+      />
       <Route path="/games/:slug" element={<DedicatedGameRoute />} />
+
     </Routes>
   )
 }
