@@ -9,7 +9,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <GameRoutes />
+        <App />
       </AuthProvider>
     </BrowserRouter>
   </StrictMode>,
