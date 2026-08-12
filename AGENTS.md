@@ -14,7 +14,7 @@
 ## Structure Requirement
 
 - DO NOT modify anything under /
-- DO NOT modify anything under src/ unless it's absolutely neccssary. DO NOT modify App.jsx under any occassion.
+- DO NOT modify anything under src/ unless it's absolutely neccssary. DO NOT modify App.jsx under any occassion unless you are the maintainer.
 - Put new feature/page under its own subfolder under src/
 - DO NOT modify other subfolders while working new on new feature.
 
