@@ -15,7 +15,7 @@ import GameIndexPage from './game.pages/GameIndexPage.jsx'
 import GamePage from './game.pages/GamePage.jsx'
 import './auth/auth.css'
 import './App.css'
-
+import WishlistPurchase from './wishlistandpurchases/wishlist_purchase.jsx'
 function Home() {
   const [count, setCount] = useState(0)
 
@@ -43,6 +43,7 @@ function App() {
       <Route path="/blog/manage" element={<BlogManagePage />} />
       <Route path="/blog/:slug" element={<BlogArticlePage />} />
       <Route path="/login" element={<AuthPage key="login" mode="login" />} />
+      <Route path='/wishlist' element={<WishlistPurchase/>}/>
       <Route
         path="/register"
         element={<AuthPage key="register" mode="register" />}
