@@ -16,6 +16,7 @@ import GamePage from './game.pages/GamePage.jsx'
 import './auth/auth.css'
 import './App.css'
 import WishlistPurchase from './wishlistandpurchases/wishlist_purchase.jsx'
+import {PressKitManagePage, PressKitPage} from './press-kit/index.js'
 function Home() {
   const [count, setCount] = useState(0)
 
@@ -44,7 +45,9 @@ function App() {
       <Route path="/blog/:slug" element={<BlogArticlePage />} />
       <Route path="/login" element={<AuthPage key="login" mode="login" />} />
       <Route path='/wishlist' element={<WishlistPurchase/>}/>
-      <Route
+      <Route path='/press-kit' element={<PressKitPage/>}/>
+      <Route path='/press-kit/manage' element={<PressKitManagePage/>}/>
+      <Route 
         path="/register"
         element={<AuthPage key="register" mode="register" />}
       />
