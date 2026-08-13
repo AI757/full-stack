@@ -17,6 +17,13 @@
 - DO NOT modify anything under src/ unless it's absolutely neccssary. DO NOT modify App.jsx under any occassion unless you are the maintainer.
 - Put new feature/page under its own subfolder under src/
 - DO NOT modify other subfolders while working new on new feature.
+- Rules above may be bypassed if and only if you have justified reasons.
+
+## Branch Requirement
+
+- All features shall have its own branch.
+- Only pr from dev to main is accepted.
+- dev and main can only modified by pull request
 
 ## Codex Code Reviews
 
