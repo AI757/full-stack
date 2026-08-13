@@ -1,0 +1,138 @@
+.press-kit-page {
+  min-height: 100svh;
+  text-align: left;
+}
+
+.press-kit-header {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+}
+
+.press-kit-brand {
+  display: grid;
+  text-decoration: none;
+}
+
+.press-kit-nav,
+.press-kit-form-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.press-kit-nav a {
+  text-decoration: none;
+}
+
+.press-kit-content {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+  box-sizing: border-box;
+}
+
+.press-kit-intro {
+  margin-bottom: 40px;
+}
+
+.press-kit-intro > p:last-child {
+  max-width: 700px;
+}
+
+.press-kit-section + .press-kit-section {
+  margin-top: 48px;
+}
+
+.press-kit-section-heading {
+  margin-bottom: 20px;
+}
+
+.press-kit-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.press-kit-form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  font: inherit;
+}
+
+.press-kit-form-footer {
+  justify-content: space-between;
+}
+
+.press-kit-submissions {
+  margin-top: 32px;
+}
+
+.press-kit-submissions ul {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.press-kit-submissions li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.press-kit-qa-list {
+  display: grid;
+  gap: 24px;
+}
+
+.press-kit-qa {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.press-kit-qa header,
+.press-kit-answer {
+  display: grid;
+  gap: 8px;
+}
+
+.press-kit-answer {
+  margin-top: 20px;
+  padding-left: 24px;
+}
+
+.press-kit-answer > p {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 640px) {
+  .press-kit-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .press-kit-content {
+    padding: 36px 20px 60px;
+  }
+
+  .press-kit-answer {
+    padding-left: 0;
+  }
+
+  .press-kit-submissions li,
+  .press-kit-form-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

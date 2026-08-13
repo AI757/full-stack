@@ -1,0 +1,46 @@
+.press-kit-management {
+  display: grid;
+  gap: 24px;
+}
+
+.press-kit-management-item {
+  display: grid;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.press-kit-management-item header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.press-kit-management-item h2 {
+  margin-top: 8px;
+}
+
+.press-kit-management-item textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  font: inherit;
+}
+
+.press-kit-management-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .press-kit-management-item header,
+  .press-kit-management-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
