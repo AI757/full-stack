@@ -1,10 +1,5 @@
-import { useState } from 'react'
 import { Route, Routes, useParams } from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import AuthPage from './auth/AuthPage.jsx'
-import AuthStatus from './auth/AuthStatus.jsx'
 import {
   BlogArticlePage,
   BlogListPage,
@@ -18,13 +13,7 @@ import './App.css'
 import WishlistPurchase from './wishlistandpurchases/wishlist_purchase.jsx'
 import {PressKitManagePage, PressKitPage} from './press-kit/index.js'
 function Home() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      
-    </>
-  )
+  return null
 }
 
 function DedicatedGameRoute() {
