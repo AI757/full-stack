@@ -83,6 +83,9 @@ function PressKitPage() {
     }
   }, [isAuthLoading, user])
 
+  // Correlate each access result with the account that requested it. Without
+  // this guard, a newly signed-in user could briefly see the previous user's
+  // submission controls while their own /mine request is still pending.
   const currentJournalistAccess = isAuthLoading
     ? 'checking'
     : !user

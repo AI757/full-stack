@@ -11,11 +11,15 @@ const dateFormatter = new Intl.DateTimeFormat(undefined, {
   dateStyle: 'medium',
   timeStyle: 'short',
 })
+// Keep questions awaiting staff action first. Unknown future statuses sort last
+// until the moderation workflow explicitly assigns them a queue position.
 const statusOrder = { pending: 0, answered: 1, rejected: 2 }
 
 function sortQuestions(questions) {
   return [...questions].sort((first, second) => {
-    const statusDifference = statusOrder[first.status] - statusOrder[second.status]
+    const firstStatusOrder = statusOrder[first.status] ?? Number.MAX_SAFE_INTEGER
+    const secondStatusOrder = statusOrder[second.status] ?? Number.MAX_SAFE_INTEGER
+    const statusDifference = firstStatusOrder - secondStatusOrder
 
     if (statusDifference !== 0) return statusDifference
 
