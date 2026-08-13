@@ -44,14 +44,14 @@ function AuthProvider({ children }) {
   }, [])
 
   const register = useCallback(
-    async ({ username, email, password, pendingJournalist }) => {
+    async ({ username, email, password, journalist }) => {
       await apiRequest('/api/user/create', {
         method: 'POST',
         body: JSON.stringify({
           username,
           email,
           password,
-          pendingJournalist,
+          journalist,
         }),
       })
 

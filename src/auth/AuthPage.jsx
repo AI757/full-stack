@@ -11,7 +11,7 @@ function AuthPage({ mode }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
-  const [pendingJournalist, setPendingJournalist] = useState(false)
+  const [journalist, setJournalist] = useState(false)
   const [error, setError] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -43,7 +43,7 @@ function AuthPage({ mode }) {
 
     try {
       if (isRegistration) {
-        await register({ username, email, password, pendingJournalist })
+        await register({ username, email, password, journalist })
       } else {
         await login({ email, password })
       }
@@ -130,12 +130,12 @@ function AuthPage({ mode }) {
 
               <label className="auth-checkbox">
                 <input
-                  name="pendingJournalist"
+                  name="journalist"
                   type="checkbox"
-                  checked={pendingJournalist}
-                  onChange={(event) => setPendingJournalist(event.target.checked)}
+                  checked={journalist}
+                  onChange={(event) => setJournalist(event.target.checked)}
                 />
-                <span>Apply for journalist access</span>
+                <span>Register as a journalist</span>
               </label>
             </>
           )}
