@@ -20,9 +20,9 @@ const games = [
   {
     slug: 'ashfall-protocol',
     title: 'Ashfall Protocol',
-    status: 'Coming soon',
+    status: 'Available now',
     platform: 'Steam',
-    release: 'Late 2026',
+    release: 'Released 2024',
   },
 ]
 
