@@ -120,7 +120,7 @@ function PressKitPage() {
           <p className="press-kit-eyebrow">Official studio responses</p>
           <h1>Press Kit</h1>
           <p>
-            Registered journalists can send questions to Video Forge Studios.
+            Journalists can send questions to Video Forge Studios.
             Every administrator answer is published here for everyone to read.
           </p>
         </section>
@@ -138,12 +138,12 @@ function PressKitPage() {
           {currentJournalistAccess === 'signed-out' && (
             <p>
               <Link to="/login">Sign in</Link> with a journalist account to
-              submit a question. No separate approval is required.
+              submit a question.
             </p>
           )}
 
           {currentJournalistAccess === 'denied' && (
-            <p>Your account was not registered as a journalist.</p>
+            <p>Your account does not have journalist access.</p>
           )}
 
           {currentJournalistAccess === 'error' && (
