@@ -11,23 +11,17 @@
 
 
 .game-theme-cyan {
-  .game-theme-cyan {
-    --game-accent: var(--cool);
-  }
+  --game-accent: var(--cool);
 }
 
 
 .game-theme-violet {
-  .game-theme-violet {
-    --game-accent: #b9a4ff;
-  }
+  --game-accent: #7eff72;
 }
 
 
 .game-theme-ember {
-  .game-theme-ember {
-    --game-accent: var(--warm);
-  }
+  --game-accent: var(--warm);
 }
 
 
