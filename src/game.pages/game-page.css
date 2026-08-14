@@ -11,13 +11,14 @@
 
 
 .game-theme-cyan {
-  --game-accent: var(--cool);
+  --game-accent: var(--warm);
 }
 
 
 .game-theme-violet {
-  --game-accent: #7eff72;
+  --game-accent: var(--cool);
 }
+
 
 
 .game-theme-ember {
