@@ -42,6 +42,7 @@ function SiteNavbar({ count = 0 }) {
           <Nav className="me-auto">
             <Nav.Link href="/games">Games</Nav.Link>
             <Nav.Link href="/blog">Blog</Nav.Link>
+            <Nav.Link href="/press-kit">Press</Nav.Link>
             <Nav.Link href="/chat">Chat</Nav.Link>
           </Nav>
 

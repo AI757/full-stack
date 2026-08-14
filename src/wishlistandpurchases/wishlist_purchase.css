@@ -120,7 +120,8 @@
 }
 
 .store-button-primary:hover {
-  background: rgba(249, 115, 22, 0.24);
+ /* line 123 — .store-button-primary:hover */
+  background: var(--warm-bg-hover);
   border-color: var(--accent-hot);
   box-shadow: var(--shadow), var(--glow);
 }
