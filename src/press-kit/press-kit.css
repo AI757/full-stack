@@ -322,3 +322,40 @@
     font-size: 14px;
   }
 }
+
+/* Rounded navigation bubbles. */
+.press-kit-nav {
+  gap: 4px;
+}
+
+.press-kit-nav a {
+  padding: 8px 12px;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  color: #fff;
+  background: var(--accent-bg);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.2;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.press-kit-nav a:hover,
+.press-kit-nav a:focus-visible {
+  border: 1px solid var(--accent);
+  color: #fff;
+  background: var(--accent-bg);
+  transform: translateY(-1px);
+}
+
+.press-kit-nav a.active {
+  border: 1px solid var(--accent);
+  color: #fff;
+  background: var(--accent-bg);
+  box-shadow: 0 0 0 1px var(--accent-border);
+}

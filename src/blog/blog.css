@@ -524,3 +524,40 @@
     font-size: 14px;
   }
 }
+
+/* Rounded navigation bubbles. */
+.blog-nav {
+  gap: 4px;
+}
+
+.blog-nav a {
+  padding: 8px 12px;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  color: #fff;
+  background: var(--accent-bg);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.2;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.blog-nav a:hover,
+.blog-nav a:focus-visible {
+  border: 1px solid var(--accent);
+  color: #fff;
+  background: var(--accent-bg);
+  transform: translateY(-1px);
+}
+
+.blog-nav a.active {
+  border: 1px solid var(--accent);
+  color: #fff;
+  background: var(--accent-bg);
+  box-shadow: 0 0 0 1px var(--accent-border);
+}
