@@ -14,7 +14,7 @@
   padding: 16px 32px;
   border-bottom: 1px solid var(--border);
   box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.72);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -230,5 +230,95 @@
   .press-kit-nav a {
     padding-inline: 8px;
     font-size: 13px;
+  }
+}
+
+/* Match the homepage navbar. */
+.press-kit-header {
+  min-height: 56px;
+  padding: 8px max(20px, calc((100vw - 1140px) / 2 + 12px));
+  gap: 24px;
+  border-bottom: 1px solid var(--border);
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.press-kit-brand {
+  min-height: 40px;
+  align-content: center;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
+.press-kit-brand span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.press-kit-brand strong {
+  color: #fff;
+}
+
+.press-kit-nav {
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.press-kit-nav a {
+  min-height: 40px;
+  padding: 8px;
+  border: 0;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  transform: none;
+  transition: color 0.2s var(--ease);
+}
+
+.press-kit-nav a:hover,
+.press-kit-nav a:focus-visible {
+  border: 0;
+  color: var(--cool);
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.press-kit-nav a.active {
+  border: 0;
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
+}
+
+.press-kit-nav a:focus-visible {
+  outline: 2px solid var(--cool);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+  .press-kit-header {
+    min-height: 56px;
+    padding: 8px 20px;
+    gap: 4px;
+  }
+
+  .press-kit-nav {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .press-kit-nav a {
+    padding-inline: 8px;
+    font-size: 14px;
   }
 }
